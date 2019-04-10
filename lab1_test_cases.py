@@ -51,6 +51,14 @@ class TestLab1(unittest.TestCase):
         #check when there are all max values
         lst = [5,5,5,5]
         self.assertEqual(max_list_iter(lst), 5)
+
+        #list of various lengths
+        lst = [1,5,3]
+        self.assertEqual(max_list_iter(lst), 5)
+        lst = [5,3]
+        self.assertEqual(max_list_iter(lst), 5)
+        lst = [5]
+        self.assertEqual(max_list_iter(lst), 5)
         
 
     def test_reverse_rec(self):
@@ -70,6 +78,11 @@ class TestLab1(unittest.TestCase):
 
         #random list
         self.assertEqual(reverse_rec([8,-56,86]),[86,-56,8])
+
+        #list of different lengths
+        self.assertEqual(reverse_rec([8, 86]),[86, 8])
+        self.assertEqual(reverse_rec([8]),[8])
+
 
 
     def test_bin_search(self):
@@ -118,6 +131,26 @@ class TestLab1(unittest.TestCase):
         self.assertIsNone(bin_search(0, 3, len(list_val)-1, list_val))
         list_val =[0,1,2,3,4,7,8,9,10]
         self.assertIsNone(bin_search(10, 0, len(list_val)-4, list_val))
+
+        #list of various lengths
+        list_val =[0,1,2,3,4,7,8,10]
+        self.assertEqual(bin_search(10, 0, len(list_val)-1, list_val), 1)
+        list_val =[0,1,2,3,4,7,10]
+        self.assertEqual(bin_search(10, 0, len(list_val)-1, list_val), 1)
+        list_val =[0,1,2,3,4,10]
+        self.assertEqual(bin_search(10, 0, len(list_val)-1, list_val), 1)
+        list_val =[0,1,2,3,10]
+        self.assertEqual(bin_search(10, 0, len(list_val)-1, list_val), 1)
+        list_val =[0,1,2,10]
+        self.assertEqual(bin_search(10, 0, len(list_val)-1, list_val), 1)
+        list_val =[0,1,10]
+        self.assertEqual(bin_search(10, 0, len(list_val)-1, list_val), 1)
+        list_val =[0,10]
+        self.assertEqual(bin_search(10, 0, len(list_val)-1, list_val), 1)
+        list_val =[10]
+        self.assertEqual(bin_search(10, 0, len(list_val)-1, list_val), 1)
+        
+
 
 
 if __name__ == "__main__":
