@@ -134,21 +134,21 @@ class TestLab1(unittest.TestCase):
 
         #list of various lengths
         list_val =[0,1,2,3,4,7,8,10]
-        self.assertEqual(bin_search(10, 0, len(list_val)-1, list_val), 1)
+        self.assertEqual(bin_search(10, 0, len(list_val)-1, list_val), 7)
         list_val =[0,1,2,3,4,7,10]
-        self.assertEqual(bin_search(10, 0, len(list_val)-1, list_val), 1)
+        self.assertEqual(bin_search(10, 0, len(list_val)-1, list_val), 6)
         list_val =[0,1,2,3,4,10]
-        self.assertEqual(bin_search(10, 0, len(list_val)-1, list_val), 1)
+        self.assertEqual(bin_search(10, 0, len(list_val)-1, list_val), 5)
         list_val =[0,1,2,3,10]
-        self.assertEqual(bin_search(10, 0, len(list_val)-1, list_val), 1)
+        self.assertEqual(bin_search(10, 0, len(list_val)-1, list_val), 4)
         list_val =[0,1,2,10]
-        self.assertEqual(bin_search(10, 0, len(list_val)-1, list_val), 1)
+        self.assertEqual(bin_search(10, 0, len(list_val)-1, list_val), 3)
         list_val =[0,1,10]
-        self.assertEqual(bin_search(10, 0, len(list_val)-1, list_val), 1)
+        self.assertEqual(bin_search(10, 0, len(list_val)-1, list_val), 2)
         list_val =[0,10]
         self.assertEqual(bin_search(10, 0, len(list_val)-1, list_val), 1)
         list_val =[10]
-        self.assertEqual(bin_search(10, 0, len(list_val)-1, list_val), 1)
+        self.assertEqual(bin_search(10, 0, len(list_val)-1, list_val), 0)
         
 
 
